@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+   backend:
+     build: .
+     ports:
+       - "80:80"
+     volumes:
+      - .:/code
+     networks:
+      - fastapi-network
+networks:
+  fastapi-network:
+    driver: bridge
