@@ -15,3 +15,6 @@ docker compose build --no-cache
 docker compose up -d
 # Container stop 
 docker compose down
+
+<!-- cat /etc/hosts
+127.0.0.1 example.com www.example.com -->

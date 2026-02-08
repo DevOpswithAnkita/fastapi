@@ -1,5 +1,13 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
+
 app = FastAPI()
-@app.get("/app")
-def read_main(request: Request):
-    return {"message": "Hello World", "root_path": request.scope.get("root_path")}
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI with Nginx!"}
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str | None = None):
+    return {"item_id": item_id, "q": q}
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
