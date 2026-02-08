@@ -1,6 +1,12 @@
 # fastapi
 #docker build 
 docker build -t docker-fastapi:latest -f docker/dockerfile .
+# View a summary of image vulnerabilities and recommendations → docker scout quickview
+docker login
+docker scout cves docker-fastapi:latest
+docker scout quickview docker-fastapi:latest
+docker scout recommendations docker-fastapi:latest
+# Run Container
 docker run -p 8000:8000 docker-fastapi:latest
 
 #run using  docker-compose.yml
