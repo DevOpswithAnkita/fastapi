@@ -1,13 +1,13 @@
 version: '3.8'
 services:
-   backend:
-     build: .
-     ports:
-       - "80:80"
-     volumes:
-      - .:/code
-     networks:
-      - fastapi-network
-networks:
-  fastapi-network:
-    driver: bridge
+  fastapi:
+    build:
+      context: ..    
+      dockerfile: docker/dockerfile
+    restart: always
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../app:/code/app
+

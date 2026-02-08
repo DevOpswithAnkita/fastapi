@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fastapi-config
+  namespace: fastapi-ns
+data:
+  APP_NAME: "FastAPI Application"
+  LOG_LEVEL: "info"
+  ENVIRONMENT: "local"
