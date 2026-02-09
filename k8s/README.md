@@ -129,7 +129,7 @@ curl -H "Host: example.com" http://localhost:8000
 **In browser:**
 - Visit: http://localhost:8000
 - Or add to `/etc/hosts`: `127.0.0.1 example.com`
-- Then visit: http://example.com:8000
+- Then visit: http://example.com
 
 ### Method 3: NodePort (Direct cluster access)
 
